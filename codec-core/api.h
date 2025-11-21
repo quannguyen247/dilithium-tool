@@ -23,16 +23,16 @@ namespace DilithiumCodec {
     std::vector<uint8_t> stringToBytes(const std::string& str);
     std::string bytesToString(const std::vector<uint8_t>& bytes);
 
-    // Interface chung
+    // General API
     class CryptoService {
     public:
-        // Sinh cặp khóa mới
+        // KeyGen stage
         static KeyPair generateKeyPair();
 
-        // "Mã hóa" (Thực chất là Ký): Input data + Secret Key -> Signed Message
+        // Sign state (encode) Input data + Secret Key -> Signed Message
         static std::vector<uint8_t> encrypt(const std::string& data, const std::vector<uint8_t>& secretKey);
 
-        // "Giải mã" (Thực chất là Mở/Xác thực): Signed Message + Public Key -> Original Data
+        // Verify (decode) Signed Message + Public Key -> Original Data
         static std::string decrypt(const std::vector<uint8_t>& signedData, const std::vector<uint8_t>& publicKey);
     };
 }
