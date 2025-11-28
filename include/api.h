@@ -5,11 +5,7 @@
 #include <string>
 #include <cstdint>
 #include <stdexcept>
-
-// Chọn mode mặc định là 2 (An toàn chuẩn NIST)
-#ifndef DILITHIUM_MODE
-#define DILITHIUM_MODE 2
-#endif
+#include <params.h>
 
 namespace DilithiumCodec {
 
@@ -38,3 +34,5 @@ namespace DilithiumCodec {
 }
 
 #endif // CODEC_API_H
+
+#define API_MODE 2

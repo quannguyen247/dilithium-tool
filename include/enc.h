@@ -6,10 +6,10 @@
 namespace DilithiumCodec {
     class Encoder {
     public:
-        // Hàm thực hiện việc ký (đóng gói) dữ liệu
+        // Encoding (signing) function (wrapper for core C)
         static std::vector<uint8_t> signData(const std::vector<uint8_t>& data, const std::vector<uint8_t>& secretKey);
         
-        // Hàm sinh khóa (wrapper cho core C)
+        // Key generation function (wrapper for core C)
         static KeyPair keygen();
     };
 }

@@ -3,3 +3,4 @@ dilithium-core/ref/Makefile
 dilithium-tool*
 KAT_check*
 build/
+*.signed
